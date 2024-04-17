@@ -1,0 +1,9 @@
+name: "icvl_95"
+seed: ${seed}
+save_raw: true
+save_rgb: true
+save_rgb_crop: true
+save_labels: false
+idx_test: ""
+test_dir: "/data_2/fugym/SSRT/data/testing_sets/ICVL/niid_minmax/95/"
+gt_dir: "/data_2/fugym/SSRT/data/testing_sets/ICVL/gt_minmax/"

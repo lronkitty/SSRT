@@ -1,0 +1,14 @@
+logging_level: INFO
+params:
+  gpus: null
+  max_epochs: 15
+  limit_val_batches: 1
+  log_every_n_steps: 5
+  check_val_every_n_epoch: 1
+  flush_logs_every_n_steps: 2
+  weights_summary: null
+  deterministic: False
+  benchmark: True
+  profiler: "simple"
+  num_sanity_val_steps: 0
+

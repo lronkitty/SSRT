@@ -1,0 +1,9 @@
+name: "houston_mix"
+seed: ${seed}
+save_raw: true
+save_rgb: true
+save_rgb_crop: true
+save_labels: false
+idx_test: ""
+test_dir: "/data_2/fugym/SSRT/data/testing_sets/houston/mixture/mixture_95/"
+gt_dir: "/data_2/fugym/SSRT/data/testing_sets/houston/clean/"

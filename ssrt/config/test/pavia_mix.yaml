@@ -1,0 +1,9 @@
+name: "pavia_mix"
+seed: ${seed}
+save_raw: true
+save_rgb: true
+save_rgb_crop: true
+save_labels: false
+idx_test: ""
+test_dir: "/data_2/fugym/SSRT/data/testing_sets/pavia/test/95_mixture/"
+gt_dir: "/data_2/fugym/SSRT/data/testing_sets/pavia/test/"

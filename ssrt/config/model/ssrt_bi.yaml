@@ -1,0 +1,29 @@
+class_name: ssrt_Unet
+trainable: true
+beta: 0
+ckpt: ${ckpt}
+params:
+  channels: 48
+  ssl: ${data.ssl}
+  n_ssl: ${data.n_ssl}
+  ckpt: ${model.ckpt} 
+        
+  base:
+    optimizer: ${optim.optimizer}
+    lr_scheduler: ${optim.scheduler}
+    block_inference:
+      use_bi: true
+      block_size: 64
+      overlap: 6
+      # block_size: 64
+      # overlap: 6
+      padding: "reflect"
+backtracking:
+  monitor: "val_mpsnr"
+  mode: "max"
+  dirpath: "backtracking"
+  period: 5
+  div_thresh: 4
+  dummy: False
+  lr_decay: 0.8
+id: ssrt_${model.params.channels}_${data.name}_${test.name}_${noise.id}
