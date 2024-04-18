@@ -7,7 +7,7 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
 
-@hydra.main(config_path="t3sc/config", config_name="config")
+@hydra.main(config_path="ssrt/config", config_name="config")
 def main(cfg: DictConfig) -> None: 
     try:
         os.environ["CUDA_VISIBLE_DEVICES"]=cfg.gpu_ids
@@ -15,8 +15,8 @@ def main(cfg: DictConfig) -> None:
          os.environ["CUDA_VISIBLE_DEVICES"]=str(cfg.gpu_ids)
     import torch
     cfg.trainer.params.gpus = torch.cuda.device_count()
-    from t3sc.train import train
-    from t3sc.test import test
+    from ssrt.train import train
+    from ssrt.test import test
     logger.info(f"Current working directory : {os.getcwd()}")
 
     # try:
